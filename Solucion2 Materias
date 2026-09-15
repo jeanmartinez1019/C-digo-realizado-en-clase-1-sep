@@ -10,10 +10,10 @@ public class solucion_2 {
     public static void main(String[] args) {
        
         List <String> materias = new ArrayList <>();
-        materias.add(" - programacion ");
+        materias.add(" - programacion - basico");
         materias.add(" - estructura de datos ");
         materias.add(" - base de datos ");
-        materias.add(" - precalculo ");
+        materias.add(" - precalculo - basico ");
         materias.add(" - calculo  ");
         
         System.out.println(" \n lista de materias: ");
@@ -26,15 +26,15 @@ public class solucion_2 {
             String materia = iterator.next();
             System.out.println(" \n * revisando " + materia);
             
-            if (materia.equals(" - piloto - emprendimiento ")) {
+            if (materia.equals(" - basico - programacion ")) {
                 iterator.remove();
-                System.out.println(" -> se elimino por ser piloto");
+                System.out.println(" -> se elimino por ser basico");
             
             }
             
-            if (materia.equals(" - piloto - proyecto de vida ")) {
+            if (materia.equals(" - basico - precalculo")) {
                 iterator.remove();
-                System.out.println(" -> se elimino por ser piloto ");
+                System.out.println(" -> se elimino por ser basico ");
             
             }
             
