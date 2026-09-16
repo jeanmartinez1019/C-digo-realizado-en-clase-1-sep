@@ -1,0 +1,60 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.parcial;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
+
+/**
+ *
+ * @author prestamo
+ */
+public class Parcial {
+
+
+public static void main(String[] args){
+
+
+    
+        
+        List <String> materias =new ArrayList<>();
+        materias.add(" Proyecto de vida -");
+        materias.add(" Estructura de datos - piloto");
+        materias.add(" Calculo diferencial - piloto");
+        materias.add(" programacion - ");
+        materias.add(" Precalculo - piloto");
+       
+        System.out.println(" \n lista de materias: ");
+        materias.forEach(System.out::println);
+        
+        System.out.println("  \n revision de materias:");
+        
+        ListIterator<String> Iterator = materias.listIterator();
+        while (Iterator.hasNext()) {
+            String materia = Iterator.next();
+            System.out.println(" \n *revisando" + materia);
+            
+            if (materia.equals(" - piloto - estructura de datos")) {
+                Iterator.remove();
+                System.out.println(" se elimino por ser piloto");
+            }
+            if (materia.equals(" - piloto - calculo diferencial")) {
+                Iterator.remove();
+                System.out.println(" se elimino por ser piloto");
+            
+        }
+            if (materia.equals(" - piloto - precalculo")) {
+                Iterator.remove();
+                System.out.println(" se elimino por ser piloto");
+        
+
+             }
+  }
+        System.out.println("\n lista final de materias: ");
+        materias.forEach(System.out::println);
+    }
+    }
+ 
