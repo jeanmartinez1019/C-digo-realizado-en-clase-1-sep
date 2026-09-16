@@ -26,7 +26,7 @@ public class solucion_2 {
             String materia = iterator.next();
             System.out.println(" \n * revisando " + materia);
             
-            if (materia.equals(" - basico - programacion ")) {
+            if (materia.equals(" - piloto - programacion ")) {
                 iterator.remove();
                 System.out.println(" -> se elimino por ser piloto");
             
@@ -34,7 +34,7 @@ public class solucion_2 {
             
             if (materia.equals(" - piloto - precalculo")) {
                 iterator.remove();
-                System.out.println(" -> se elimino por ser basico ");
+                System.out.println(" -> se elimino por ser piloto ");
             
             }
             
