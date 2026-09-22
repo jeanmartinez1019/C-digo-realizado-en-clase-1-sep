@@ -1,0 +1,28 @@
+
+import java.util.LinkedList;
+
+public class inventary {
+  
+    public static void Main (String[]args){
+    LinkedList<String> materias=new LinkedList<>();
+   
+    materias.add ("ingles");
+    materias.add ("fisica");
+    materias.add ("calculo");
+    materias.add ("programacion");
+    
+    materias.forEach(System.out::println);
+        
+materias.addFirst("Algoritmos");
+
+     System.out.println("\n Se agrego Algoritmos al inicio de la lista");
+    materias.forEach(System.out::println);
+    
+    materias.addLast("\n Inteligencia artificial");
+    materias.forEach(System.out::println);
+    
+    
+}
+}
+    
+    
