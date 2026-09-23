@@ -1,25 +1,51 @@
 
 import java.util.LinkedList;
 
-public class inventary {
+public class Listaenlazada {
   
     public static void Main (String[]args){
     LinkedList<String> materias=new LinkedList<>();
    
-    materias.add ("ingles");
-    materias.add ("fisica");
-    materias.add ("calculo");
-    materias.add ("programacion");
-    
-    materias.forEach(System.out::println);
+    materias.add ("Programacion");
+    materias.add ("Matematicas");
+    materias.add ("Ingles");
+    materias.add ("Base de Datos");
+     materias.add ("Redes");
+   
+        System.out.println("LISTA INICIAL");
+        System.out.println(materias);
         
 materias.addFirst("Algoritmos");
 
-     System.out.println("\n Se agrego Algoritmos al inicio de la lista");
-    materias.forEach(System.out::println);
+     System.out.println("\n DESPUES DE AGREGAR AL INICIO:");
+        System.out.println(materias);
     
     materias.addLast("\n Inteligencia artificial");
-    materias.forEach(System.out::println);
+        System.out.println("\n DESPUES DE AGREGAR AL FINAL:");
+        System.out.println(materias);
+        
+        System.out.println("\n LA MATERIA QUE ESTA EN LA POSICION 3 ES:" +materias.get(3));
+        
+        System.out.println("El primer elemento de la lista es: " +materias.getFirst());
+         System.out.println("El primer elemento de la lista es: " +materias.getLast());
+         
+         if (materias.contains("Ingles")){
+             System.out.println("\n la lista contiene Ingles");
+             
+         }
+         else{
+             System.out.println("\n no contiene ingles");
+             
+         }
+         int posicion = materias.indexOf("Basesss de datos");
+         if (posicion != -1)
+             System.out.println("La posicion de la Base de Datos es:" + posicion);
+         else{
+             System.out.println("Ese elemento no se encuentra en la lista materias");
+         }
+         System.out.println("materias");
+         System.out.println(materias.set(materias.indexof("Matematicas"), "Matematicas aplica");
+         System.out.println("materias");
     
     
 }
