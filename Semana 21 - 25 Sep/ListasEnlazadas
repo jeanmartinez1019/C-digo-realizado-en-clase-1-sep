@@ -55,6 +55,18 @@ materias.addFirst("Algoritmos");
          System.out.println("n/ Se elimina se elimina un elemento utilizando su posicion");
          System.out.println(materias);
          
+         materias.removeFirst();
+         System.out.println("n/ Se elimina el primer elemento");
+         System.out.println(materias);
+         
+         materias.removeLast();
+         System.out.println("n/ Se elimina el ultimo elemento");
+         System.out.println(materias);
+         
+         
+         
+        
+         
          
          
          
