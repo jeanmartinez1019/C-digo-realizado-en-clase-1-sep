@@ -37,15 +37,28 @@ materias.addFirst("Algoritmos");
              System.out.println("\n no contiene ingles");
              
          }
-         int posicion = materias.indexOf("Basesss de datos");
+         int posicion = materias.indexOf("Bases  de datos");
          if (posicion != -1)
              System.out.println("La posicion de la Base de Datos es:" + posicion);
          else{
              System.out.println("Ese elemento no se encuentra en la lista materias");
          }
          System.out.println("materias");
-         System.out.println(materias.set(materias.indexof("Matematicas"), "Matematicas aplica");
+         System.out.println(materias.set(materias.indexOf("Matematicas"), "Matematicas aplicada"));
          System.out.println("materias");
+         
+         materias.remove("Ingles");
+         System.out.println("n/ Eliminando ingles");
+         System.out.println(materias);
+         
+         materias.remove(2);
+         System.out.println("n/ Se elimina se elimina un elemento utilizando su posicion");
+         System.out.println(materias);
+         
+         
+         
+         
+         
     
     
 }
