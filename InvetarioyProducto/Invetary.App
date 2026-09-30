@@ -25,7 +25,21 @@ public class InventaryApp {
        
        Product p5 = new Product(05,200,"lulo",(double)4000);
        
+        System.out.println(p1.getName());
+        System.out.println(p1.getExistence());
+        
+        p1.setPrice((double)4000);
+        System.out.println(p1.toString());
        
+        //Se imprime el segundo
+        
+        System.out.println(p2.getName());
+        System.out.println(p2.getExistence());
+        
+        p2.setPrice((double)2400);
+        System.out.println(p2.toString());
+        
+        LinkedList <Product> Products 
        
        
     }
