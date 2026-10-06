@@ -1,0 +1,78 @@
+import java.util.LinkedList;
+
+public class Inventary {
+    private final LinkedList<Product> products;
+
+    public Inventary() {
+        this.products = new LinkedList<>();
+    }
+
+    // Agregar producto a la lista
+    public void addProduct(Product product) {
+        products.add(product);
+    }
+
+    public void addFirstProduct(Product product) {
+        products.addFirst(product);
+    }
+
+    // Buscar producto por ID
+    public Product searchProduct(int id) {
+        for (Product p : products) {
+            if (p.getID() == id) {
+                return p;
+            }
+        }
+        System.out.println("El producto no existe");
+        return null;
+    }
+
+    // 1. Agregar existencia a un producto por ID
+    public boolean addStock(int id, int quantity) {
+        Product p = searchProduct(id);
+        if (p != null) {
+            p.setExistence(p.getExistence() + quantity);
+            System.out.println("Existencias actualizadas correctamente. Total: " + p.getExistence());
+            return true;
+        }
+        return false;
+    }
+
+    // 2. Actualizar precio de un producto por ID
+    public boolean updatePrice(int id, double newPrice) {
+        Product p = searchProduct(id);
+        if (p != null) {
+            p.setPrice(newPrice);
+            System.out.println("Precio actualizado correctamente.");
+            return true;
+        }
+        return false;
+    }
+
+    // 3. Eliminar producto por ID
+    public boolean deleteProduct(int id) {
+        Product p = searchProduct(id);
+        if (p != null) {
+            products.remove(p);
+            System.out.println("Producto eliminado con éxito.");
+            return true;
+        }
+        return false;
+    }
+
+    // Imprimir todos los productos
+    public void printProducts() {
+        if (products.isEmpty()) {
+            System.out.println("El inventario está vacío.");
+        } else {
+            for (Product p : products) {
+                System.out.println(p.toString());
+            }
+        }
+    }
+
+    // Métodos auxiliares
+    public Product getFirst() { return products.peekFirst(); }
+    public Product getLast() { return products.peekLast(); }
+    public int size() { return products.size(); }
+}
