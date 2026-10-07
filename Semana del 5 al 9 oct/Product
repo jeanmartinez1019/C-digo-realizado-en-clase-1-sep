@@ -1,7 +1,15 @@
-import java.util.Objects;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.inventoryapp;
 
+/**
+ *
+ * @author prestamo
+ */
 public class Product {
-    private int id;
+        private int id;
     private String name;
     private int existence;
     private double price;
@@ -45,14 +53,12 @@ public class Product {
         return id == product.id;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
-
+   
     @Override
     public String toString() {
         return "Product [ID=" + id + ", Nombre=" + name + ", Categoría=" + category + 
                ", Precio=" + price + ", Existencias=" + existence + "]";
     }
 }
+    
+
