@@ -1,16 +1,32 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.inventoryapp;
+
+
+
+
+
 import java.util.Scanner;
 
-public class InventaryApp {
-    private final Scanner sc;
-    private Inventary inventary;
+/**
+ *
+ * @author prestamo
+ */
+public class InventoryApp {
 
-    public InventaryApp() {
-        sc = new Scanner(System.in);
-        inventary = new Inventary();
+     
+        private Scanner sc;
+        private Inventory inventory;
+
+    public InventoryApp() {
+        sc = new Scanner (System.in);
+        inventory = new Inventory();
     }
 
     public static void main(String[] args) {
-        InventaryApp app = new InventaryApp();
+        InventoryApp app = new InventoryApp();
         app.init();
     }
 
@@ -26,7 +42,7 @@ public class InventaryApp {
 
             switch (option) {
                 case 1 -> newProduct();
-                case 2 -> inventary.printProducts();
+                case 2 -> inventory.printProducts();
                 case 3 -> consultProduct(); // Nueva opción agregada
                 case 4 -> addStock(); // Nueva opción para agregar existencias
                 case 5 -> updateProductPrice();
@@ -47,7 +63,7 @@ public class InventaryApp {
         System.out.println("4. Agregar existencia a un producto");
         System.out.println("5. Actualizar precio de producto");
         System.out.println("6. Eliminar producto por ID");
-        System.out.println("7. Ver consultas generales (Primero/Último/Tamaño)");
+        System.out.println("7. Ver consultas generales ");
         System.out.println("0. Salir");
     }
 
@@ -69,14 +85,14 @@ public class InventaryApp {
         int existence = sc.nextInt();
 
         Product p = new Product(id, existence, name, price, category);
-        inventary.addProduct(p);
+        inventory.addProduct(p);
         System.out.println("Producto agregado exitosamente.");
     }
 
     private void consultProduct() {
         System.out.print("Ingrese el ID del producto a consultar: ");
         int id = sc.nextInt();
-        Product p = inventary.searchProduct(id);
+        Product p = inventory.searchProduct(id);
         if (p != null) {
             System.out.println("Datos del producto: " + p);
         }
@@ -88,7 +104,7 @@ public class InventaryApp {
         System.out.print("Ingrese la cantidad a sumar: ");
         int quantity = sc.nextInt();
 
-        inventary.addStock(id, quantity);
+        inventory.addStock(id, quantity);
     }
 
     private void updateProductPrice() {
@@ -97,31 +113,33 @@ public class InventaryApp {
         System.out.print("Ingrese el nuevo precio: ");
         double price = sc.nextDouble();
 
-        inventary.updatePrice(id, price);
+        inventory.updatePrice(id, price);
     }
 
     private void deleteProduct() {
         System.out.print("Ingrese el ID del producto a eliminar: ");
         int id = sc.nextInt();
 
-        inventary.deleteProduct(id);
+        inventory.deleteProduct(id);
     }
 
     private void showQueries() {
-        if (inventary.size() > 0) {
-            System.out.println("Primer elemento: " + inventary.getFirst().getName());
-            System.out.println("Último elemento: " + inventary.getLast().getName());
-            System.out.println("Total de productos: " + inventary.size());
+        if (inventory.size() > 0) {
+            System.out.println("Primer elemento: " + inventory.getFirst().getName());
+            System.out.println("Último elemento: " + inventory.getLast().getName());
+            System.out.println("Total de productos: " + inventory.size());
         } else {
             System.out.println("El inventario está vacío.");
         }
     }
 
     private void loadInitialData() {
-        inventary.addProduct(new Product(1, 50, "manzana", 2000.0, "Frutas"));
-        inventary.addProduct(new Product(2, 70, "banano", 1300.0, "Frutas"));
-        inventary.addProduct(new Product(3, 30, "aguacate", 6000.0, "Verduras"));
-        inventary.addFirstProduct(new Product(4, 59, "pepino", 2500.0, "Verduras"));
-        inventary.addProduct(new Product(5, 200, "lulo", 4000.0, "Frutas"));
+        inventory.addProduct(new Product(1, 50, "manzana", 2000.0, "Frutas"));
+        inventory.addProduct(new Product(2, 70, "banano", 1300.0, "Frutas"));
+        inventory.addProduct(new Product(3, 30, "aguacate", 6000.0, "Verduras"));
+        inventory.addFirstProduct(new Product(4, 59, "pepino", 2500.0, "Verduras"));
+        inventory.addProduct(new Product(5, 200, "lulo", 4000.0, "Frutas"));
     }
 }
+    
+
