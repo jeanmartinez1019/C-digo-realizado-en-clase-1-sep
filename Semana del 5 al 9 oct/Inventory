@@ -1,9 +1,17 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.inventoryapp;
 import java.util.LinkedList;
+/**
+ *
+ * @author prestamo
+ */
+public class Inventory {
+      private LinkedList<Product> products;
 
-public class Inventary {
-    private final LinkedList<Product> products;
-
-    public Inventary() {
+    public Inventory() {
         this.products = new LinkedList<>();
     }
 
@@ -76,3 +84,4 @@ public class Inventary {
     public Product getLast() { return products.peekLast(); }
     public int size() { return products.size(); }
 }
+    
