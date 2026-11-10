@@ -4,7 +4,7 @@ public class PilaPersonal {
     public static void main(String[] args) {
         Stack<Integer> pila = new Stack<>();
 
-        // TODO 1: Mete con push() tus 3 datos (número de lista, día de cumpleaños, mes de cumpleaños)
+       
         pila.push(12);
         imprimirPila(pila);
 
@@ -14,10 +14,10 @@ public class PilaPersonal {
         pila.push(7);
         imprimirPila(pila);
 
-        // TODO 2: Busca tu número de lista con search() e imprime la posición
+        
         System.out.println("Posicion de mi numero de lista: " + pila.search(12));
 
-        // TODO 3: Vacía la pila de forma segura
+
         while (!pila.empty()) {
             System.out.println("Se saco " + pila.pop());
             imprimirPila(pila);
